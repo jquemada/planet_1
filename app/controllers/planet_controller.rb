@@ -5,4 +5,8 @@ class PlanetController < ApplicationController
   def contact
   end
 
+# GET /planet/ejemplo
+  def ejemplo
+  end
+
 end
