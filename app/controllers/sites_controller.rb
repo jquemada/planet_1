@@ -2,8 +2,13 @@ class SitesController < ApplicationController
   # GET /sites
   # GET /sites.json
   def index
-    @sites = Site.all
 
+    if params[:type_id].nil? or params[:type_id].empty?
+      @sites = Site.all
+    else
+      @sites = Type.find(params[:type_id]).sites
+    end
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @sites }

@@ -18,7 +18,7 @@
   <tr>
     <td><%= site.name %></td>
     <td><%= site.description %></td>
-    <td><%= site.type_id %></td>
+    <td><%= site.type.name if site.type %></td>
     <td><%= site.latitude %></td>
     <td><%= site.longitude %></td>
     <td><%= site.zoom %></td>
