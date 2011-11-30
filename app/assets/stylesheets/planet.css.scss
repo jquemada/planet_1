@@ -1,3 +1,52 @@
 // Place all the styles related to the Planet controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.nombre{
+font-family: Comic Sans MS;
+font-weight: bold;
+}
+
+.curriculum{
+padding-left: 10px;
+}
+
+.foto_daniel{
+position:relative;
+top:300px;
+left:-980px;
+}
+
+.foto_david{
+position:relative;
+top:140px;
+left:-420px;
+}
+
+#alumno_daniel{
+float: left;
+}
+
+#alumno_david{
+float: left;
+margin-left:150px;
+}
+
+li{
+padding-top:10px;
+}
+
+.wrapper {
+min-height: 100%;
+height: auto;
+height: 100%;
+margin: 0 auto -4em;
+}
+
+.pie_pagina, .push{
+height: 4em;
+}
+
+html, body {
+height: 100%;
+}
