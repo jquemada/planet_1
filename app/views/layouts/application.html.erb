@@ -7,8 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="#topLinksBar">
+  <%= link_to('Home', planet_index_path) + " | " + link_to('Contact', planet_contact_path) + " | " + link_to('Ejemplo', planet_ejemplo_path) + " | " + link_to('Author', planet_author_path) %>
+</div>
 
 <%= yield %>
 
+<div id="#bottomLinksBar">
+  <%= link_to('Home', planet_index_path) + " | " + link_to('Contact', planet_contact_path) + " | " + link_to('Ejemplo', planet_ejemplo_path) + " | " + link_to('Author', planet_author_path) %>
+</div>
 </body>
 </html>

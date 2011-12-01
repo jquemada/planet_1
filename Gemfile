@@ -34,3 +34,7 @@ group :test do
   # Pretty printed test output
   gem 'turn', '0.8.2', :require => false
 end
+
+#Gema para motor de java script
+
+gem 'therubyracer'

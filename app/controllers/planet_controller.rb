@@ -9,4 +9,8 @@ class PlanetController < ApplicationController
   def ejemplo
   end
 
+# GET /planet/author
+  def author
+  end
+
 end
