@@ -1,18 +1,15 @@
 <!DOCTYPE html> 
 <html> 
 <head> 
-  <title>Planet Travel Site</title> 
-<!-- START:stylesheet --> 
-  <%= stylesheet_link_tag "scaffold" %>
-  <%= stylesheet_link_tag "planet", :media => "all" %><!-- <label id="code.slt"/> --> 
-<!-- END:stylesheet --> 
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %><!-- <label id="code.csrf"/> --> 
-</head> 
+  <title>Planet</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
 <body id="planet"> 
   <div id="banner"> 
     <%= image_tag("logo3.png") %>
-    <%= @page_title || "Planet Travel Site" %><!-- <label id="code.depot.e.title"/> --> 
+    <%= @page_title || "Planet Travel Site" %>
   </div> 
   <div id="columns"> 
     <div id="side"> 
@@ -22,7 +19,7 @@
       <%= link_to "Contact", planet_contact_path %>
     </div> 
     <div id="main"> 
-      <%= yield %><!-- <label id="code.depot.e.include"/> --> 
+      <%= yield %>
     </div> 
   </div> 
 </body> 
