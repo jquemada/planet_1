@@ -1,4 +1,6 @@
 Planet::Application.routes.draw do
+  get "planet/author"
+
   get "planet/index"
 
   get "planet/contact"
