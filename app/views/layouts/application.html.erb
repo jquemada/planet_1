@@ -10,6 +10,13 @@
   <div id="banner"> 
     <%= image_tag("logo3.png") %>
     <%= @page_title || "Planet Travel Site" %>
+    <%= @page_title || "Planet Travel Site" %><br/><!-- <label id="code.depot.e.title"/> -->
+    <%= link_to "Home", planet_index_path %>
+    <%= link_to "Contact", planet_contact_path %>
+    <%= link_to "Author", planet_author_path %>
+     <%= link_to "Ejemplo", planet_ejemplo_path %>
+
+
   </div> 
   <div id="columns"> 
     <div id="side"> 
@@ -17,10 +24,22 @@
       <%= link_to "Tipos",  types_path %><br /> 
       <%= link_to "Sitios", sites_path %><br /> 
       <%= link_to "Contact", planet_contact_path %>
+      <%= link_to "Author", planet_author_path %>
+      <%= link_to "Ejemplo", planet_ejemplo_path %>
+
     </div> 
     <div id="main"> 
       <%= yield %>
+      
     </div> 
-  </div> 
+    
+  </div>
+   <div id="banner"> 
+	 <%= link_to "Home", planet_index_path %>
+    <%= link_to "Contact", planet_contact_path %>
+    <%= link_to "Author", planet_author_path %>
+     <%= link_to "Ejemplo", planet_ejemplo_path %>
+
+ </div> 
 </body> 
 </html> 
