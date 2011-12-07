@@ -1,0 +1,25 @@
+<h1>Authors</h1>
+
+<p>This site has been - partially - written by:</p>
+
+<% @authors.each do |author| %>
+  <div class="author">
+    <div class="author-image">
+	  <% if author.has_key?(:image) and author[:image] != nil %>
+	    <%= image_tag(author[:image]) %>
+	  <% end %>
+    </div>
+	<div class="author-description">
+		<p>
+		  <%= author[:name] %> - <%= author[:address] %>
+		</p>
+		<p>
+		  <%= author[:curriculum] %>
+		</p>
+		<p>
+		  <%= link_to(author[:email], "mailto://" + author[:email]) %>
+		</p>
+	</div>
+  </div>
+  <hr>
+<% end %>

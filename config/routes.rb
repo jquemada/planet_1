@@ -1,18 +1,17 @@
 Planet::Application.routes.draw do
 
-  resources :sites
-    
-  resources :types
-    
-  resources :types do
-    resources :sites
-  end
-
   get "planet/index"
 
   get "planet/contact"
 
   get "planet/ejemplo"    # Se añade una nueva ruta a la acción ejemplo
+  get "planet/author"
+  
+  resources :types do
+      resources :sites
+  end
+
+  resources :sites
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
