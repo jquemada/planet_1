@@ -6,7 +6,7 @@ class TypesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @types }
+        format.json { render :json => @types }
     end
   end
 
@@ -17,7 +17,7 @@ class TypesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @type }
+        format.json { render :json => @type }
     end
   end
 
@@ -28,7 +28,7 @@ class TypesController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @type }
+        format.json { render :json => @type }
     end
   end
 
@@ -44,11 +44,11 @@ class TypesController < ApplicationController
 
     respond_to do |format|
       if @type.save
-        format.html { redirect_to @type, notice: 'Type was successfully created.' }
-        format.json { render json: @type, status: :created, location: @type }
+          format.html { redirect_to @type, :notice => 'Type was successfully created.' }
+          format.json { render :json => @type, :status => :created, :location => @type }
       else
-        format.html { render action: "new" }
-        format.json { render json: @type.errors, status: :unprocessable_entity }
+          format.html { render :action => "new" }
+          format.json { render :json => @type.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -60,11 +60,11 @@ class TypesController < ApplicationController
 
     respond_to do |format|
       if @type.update_attributes(params[:type])
-        format.html { redirect_to @type, notice: 'Type was successfully updated.' }
+          format.html { redirect_to @type, :notice => 'Type was successfully updated.' }
         format.json { head :ok }
       else
-        format.html { render action: "edit" }
-        format.json { render json: @type.errors, status: :unprocessable_entity }
+          format.html { render :action => "edit" }
+          format.json { render :json => @type.errors, :status => :unprocessable_entity }
       end
     end
   end

@@ -1,12 +1,14 @@
 class PlanetController < ApplicationController
-  def index
-  end
-
-  def contact
-  end
-
-# GET /planet/ejemplo
-  def ejemplo
+    def index
+    end
+    
+    def contact
+    end
+    
+    def ejemplo
+    end
+    
+    def author
   end
 
 end

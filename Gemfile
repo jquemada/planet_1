@@ -7,6 +7,7 @@ gem 'rails', '3.1.3'
 
 gem 'sqlite3'
 
+gem 'rake', '0.9.2.2'
 
 # Gems used only for assets and not required
 # in production environments by default.
