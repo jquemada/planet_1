@@ -19,8 +19,19 @@
       <%= link_to "Contact", planet_contact_path %>
     </div> 
     <div id="main"> 
-      <%= yield %>
+        <%= link_to 'home', planet_index_path %>
+        <%= link_to 'contact', planet_contact_path %>
+        <%= link_to 'ejemplo', planet_ejemplo_path %>
+        <%= link_to 'author', planet_author_path %>
+        
+        <%= yield %>
+        
+        <%= link_to 'home', planet_index_path %>
+        <%= link_to 'contact', planet_contact_path %>
+        <%= link_to 'ejemplo', planet_ejemplo_path %>
+        <%= link_to 'author', planet_author_path %>
+
     </div> 
   </div> 
 </body> 
-</html> 
+</html>
