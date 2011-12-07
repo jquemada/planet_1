@@ -19,9 +19,10 @@ class PlanetController < ApplicationController
 	   :image 		=>	'leo.png'
 	  },
 	  {:name		=>	"Miguel Revolo",
-	   :address		=>  "Francos Rodriguez 64, 3B escalera derecha, Madrid, SPAIN",
-	   :email		=>  "miguel.revolo@gmail.com",
-	   :curriculum	=>	"Erasmus student at UPM"
+	   :address		=>	"Francos Rodriguez 64, 3B escalera derecha, Madrid, SPAIN",
+	   :email		=> 	"miguel.revolo@gmail.com",
+	   :curriculum	=>	"Erasmus student at UPM",
+	   :image		=>	'miguel.png'
 	  }
 	]
   end
