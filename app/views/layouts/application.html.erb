@@ -19,6 +19,15 @@
       <%= link_to "Contact", planet_contact_path %>
     </div> 
     <div id="main"> 
+	  <div class="links-top">
+	  	<%= link_to "Home", planet_index_path + " | " %> 
+		<%= link_to "Contact", planet_contact_path + " | " %>
+		<%=	link_to "Author", planet_author_path %>
+		<!-- TODO: Add `ejemplo` link as mentioned in the subject, but what is it ?! -->
+	  </div>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
       <%= yield %>
     </div> 
   </div> 
