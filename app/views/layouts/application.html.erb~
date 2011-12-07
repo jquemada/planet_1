@@ -14,17 +14,13 @@
   <div id="banner"> 
     <%= image_tag("logo3.png") %>
     <%= @page_title || "Planet Travel Site" %><!-- <label id="code.depot.e.title"/> --> 
- 
- 
   </div> 
-
-    <p>
+  <p>
    <%= link_to('Index', planet_index_path) %>
   <%= link_to('Contact', planet_contact_path) %>
   <%= link_to('Ejemplo', planet_ejemplo_path)  %>
   <%= link_to('Author', planet_author_path)  %>
  </p>
-
   <div id="columns"> 
     <div id="side"> 
     
@@ -37,15 +33,13 @@
     
 
       <%= yield %><!-- <label id="code.depot.e.include"/> --> 
-      
+       <%= link_to('Index', planet_index_path) %>
+  <%= link_to('Contact', planet_contact_path) %>
+  <%= link_to('Ejemplo', planet_ejemplo_path)  %>
+  <%= link_to('Author', planet_author_path)  %>
 
     </div> 
-    
   </div> 
-  <%= link_to('Index', planet_index_path) %>
-      <%= link_to('Contact', planet_contact_path) %>
-      <%= link_to('Ejemplo', planet_ejemplo_path)  %>
-      <%= link_to('Author', planet_author_path)  %>
 </body> 
 </html> 
 
