@@ -16,10 +16,10 @@ class PlanetController < ApplicationController
 	   :address		=>	"Calle de Linneo 26 Bajo B, Madrid, SPAIN",
 	   :email		=>	"leo.goffic@gmail.com",
 	   :curriculum	=>  "Erasmus student at UPM",
-	   :image 		=>	nil
+	   :image 		=>	'leo.png'
 	  },
 	  {:name		=>	"Miguel Revolo",
-	   :address		=>  "Madrid, SPAIN",
+	   :address		=>  "Francos Rodriguez 64, 3B escalera derecha, Madrid, SPAIN",
 	   :email		=>  "miguel.revolo@gmail.com",
 	   :curriculum	=>	"Erasmus student at UPM"
 	  }
