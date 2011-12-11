@@ -20,12 +20,12 @@
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :type_id %><br />
-    <%= f.number_field :type_id %>
+    <% types = Type.find(:all, :order => :name) %>
+       <%= f.collection_select(:type_id, types, :id, :name) %>
   </div>
   <div class="field">
-    <%= f.label :latitud %><br />
-    <%= f.text_field :latitud %>
+    <%= f.label :latitude %><br />
+    <%= f.text_field :latitude %>
   </div>
   <div class="field">
     <%= f.label :longitude %><br />
@@ -33,7 +33,7 @@
   </div>
   <div class="field">
     <%= f.label :zoom %><br />
-    <%= f.text_field :zoom %>
+    <%= f.text_field :zoom, value: "22" %>
   </div>
   <div class="field">
     <%= f.label :image_url %><br />

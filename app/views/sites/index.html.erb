@@ -5,7 +5,7 @@
     <th>Name</th>
     <th>Description</th>
     <th>Type</th>
-    <th>Latitud</th>
+    <th>Latitude</th>
     <th>Longitude</th>
     <th>Zoom</th>
     <th>Image url</th>
@@ -18,8 +18,8 @@
   <tr>
     <td><%= site.name %></td>
     <td><%= site.description %></td>
-    <td><%= site.type_id %></td>
-    <td><%= site.latitud %></td>
+    <td><%= site.type.name if site.type %></td>
+    <td><%= site.latitude %></td>
     <td><%= site.longitude %></td>
     <td><%= site.zoom %></td>
     <td><%= site.image_url %></td>
