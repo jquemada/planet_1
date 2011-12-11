@@ -1,8 +1,17 @@
 class SitesController < ApplicationController
   # GET /sites
   # GET /sites.json
-  def index
+ 
+ def index
+
+# Se incluye @site = Site.all dentro de esta sentencia if-else-end
+#    -> si la condición es falsa el path es: /types/id/sites
+if params[:type_id].nil? or params[:type_id].empty?
     @sites = Site.all
+else
+    @sites = Type.find(params[:type_id]).sites
+end
+
 
     respond_to do |format|
       format.html # index.html.erb
@@ -12,6 +21,7 @@ class SitesController < ApplicationController
 
   # GET /sites/1
   # GET /sites/1.json
+
   def show
     @site = Site.find(params[:id])
 

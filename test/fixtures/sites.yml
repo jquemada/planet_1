@@ -4,7 +4,7 @@ one:
   name: MyString
   description: MyText
   type_id: 1
-  latitud: 9.99
+  latitude: 9.99
   longitude: 9.99
   zoom: 9.99
   image_url: MyString
@@ -13,7 +13,7 @@ two:
   name: MyString
   description: MyText
   type_id: 1
-  latitud: 9.99
+  latitude: 9.99
   longitude: 9.99
   zoom: 9.99
   image_url: MyString
