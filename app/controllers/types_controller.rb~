@@ -45,7 +45,7 @@ class TypesController < ApplicationController
     respond_to do |format|
       if @type.save
         format.html { redirect_to @type, notice=> 'Type was successfully created.' }
-        format.json { render json=> @type, status=> :created, location=> @type }
+        format.json { render json=> @type, status=> :created, location: @type }
       else
         format.html { render action=> "new" }
         format.json { render json=> @type.errors, status=> :unprocessable_entity }

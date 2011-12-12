@@ -1,5 +1,7 @@
 Planet::Application.routes.draw do
 
+  resources :viajes
+
   get "planet/author"
 
   resources :sites
