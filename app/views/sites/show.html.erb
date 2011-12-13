@@ -1,40 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div id="site">
+  <h1><%= @site.type.name if @site.type %></h1>
+  <%= image_tag(@site.image_url, :class => 'site_image') %>
+  <h3><%= @site.name %></h3>
+                 <!-- sanitize limpia virus, ... -->
+  <p><%=sanitize @site.description %></p>
+  <div class="position">
+    <span>
+       <b>Latitude:</b> <!-- en negrita (bold) -->
+       <%= @site.latitude %>
+    </span>
+    <span>
+        <b>Longitude:</b> <!-- en negrita (bold) -->
+        <%= @site.longitude %>
+    </span>
+  </div>
+</div>
 
-<p>
-  <b>Name:</b>
-  <%= @site.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @site.description %>
-</p>
-
-<p>
-  <b>Type:</b>
-  <%= @site.type.name %>
-</p>
-
-<p>
-  <b>Latitud:</b>
-  <%= @site.latitude %>
-</p>
-
-<p>
-  <b>Longitude:</b>
-  <%= @site.longitude %>
-</p>
-
-<p>
-  <b>Zoom:</b>
-  <%= @site.zoom %>
-</p>
-
-<p>
-  <b>Image url:</b>
-  <%= @site.image_url %>
-</p>
-
-
+<p />
 <%= link_to 'Edit', edit_site_path(@site) %> |
 <%= link_to 'Back', sites_path %>

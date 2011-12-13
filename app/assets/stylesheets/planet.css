@@ -1,0 +1,102 @@
+#banner {
+  background: #668;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid;
+  font: small-caps 40px/40px
+       "Times New Roman", serif;
+  color: #bfb;
+  text-align: center;
+}
+
+
+#banner img {
+  float: left;
+  padding-left: 10px;
+}
+#columns {
+  background: #446;
+}
+#main {
+  margin-left: 9em;
+  padding-top: 4ex;
+  padding-left: 2em;
+  background: white;
+}
+#side {
+  float: left;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  width: 8em;
+  background: #446;
+}
+#side a {
+  color: #bfb;
+  font-size: small;
+}
+#columns a{
+color: #bfb;
+  font-size: small;
+}
+#columns #main a{
+color: #222266;
+  font-size: small;
+}
+#planet #notice {
+         color: #000;
+         border: 2px solid red;
+         padding: 1em;
+         margin-bottom: 2em;
+         background-color: #f0f0f0;
+         font: bold smaller sans-serif;
+}
+#planet h1 {
+         font: 150% sans-serif;
+         color: #226;
+         border-bottom: 3px dotted #77d;
+}
+/* Styles for index, sites and types */
+#site_list table {
+         border-collapse: collapse;
+}
+#site_list table tr td {
+         padding: 5px;
+         vertical-align: top;
+}
+#site_list .list_image {
+  width:         60px;
+  height:        70px;
+}
+
+#site_list .list_description {
+  width:         60%;
+}
+#site_list .list_description dl {
+         margin: 0;
+}
+#site_list .list_description dt {
+! color:          #244;
+! font-weight: bold;
+! font-size:      larger;
+}
+#site_list .list_description dd {
+         margin: 0;
+}
+#site_list .list_actions {
+  font-size:     x-small;
+  text-align:    right;
+  padding-left: 1em;
+}
+#site_list .list_line_even {
+  background:    #a8b8f8;
+}
+#site_list .list_line_odd {
+  background:    #88b0f8;
+}
+div#columns div#main div#site_list table tbody tr.list_line_odd td.list_description dl dt a{
+color: #BBFFBB;
+  font-size: small;
+}
+
+
