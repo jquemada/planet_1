@@ -1,0 +1,23 @@
+<h1>Listing viajes</h1>
+
+<table>
+  <tr>
+    <th>Site</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @viajes.each do |viaje| %>
+  <tr>
+    <td><%= viaje.site_id %></td>
+    <td><%= link_to 'Show', viaje %></td>
+    <td><%= link_to 'Edit', edit_viaje_path(viaje) %></td>
+    <td><%= link_to 'Destroy', viaje, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Viaje', new_viaje_path %>

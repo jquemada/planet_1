@@ -8,8 +8,10 @@ class SitesController < ApplicationController
 #    -> si la condición es falsa el path es: /types/id/sites
 if params[:type_id].nil? or params[:type_id].empty?
     @sites = Site.all
+
 else
     @sites = Type.find(params[:type_id]).sites
+    @type = Type.find(params[:type_id]).name
 end
 
 

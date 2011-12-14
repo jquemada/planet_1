@@ -14,10 +14,24 @@
 </div>
 <div id="columns">
 	<div id="side">
-<%= link_to "Sitios", sites_path %> <br />
-<%= link_to "Tipos", types_path %> <br />
-<%=link_to('Home', planet_index_path) %> <br /> <%=link_to('Contact', planet_contact_path) %><br /> <%=link_to('Ejemplo', planet_ejemplo_path) %> <br /> <%=link_to('Author', planet_author_path) %>
+<dl>
+  <dt><%= link_to "Sitios", sites_path %> </dt>
+<dt><%= link_to "Tipos", types_path %> </dt>
 
+
+ <% @types= Type.all %>
+	
+
+	<% for i in 0 ..@types.count-1 do %>
+		<dd>  <%=  link_to @types[i].name, types_path+"/"+(i+1).to_s+"/"+"sites" %></dd>
+	<% end  %>
+
+
+<dt><%=link_to('Home', planet_index_path) %> </dt> 
+<dt><%=link_to('Contact', planet_contact_path) %></dt> 
+<dt><%=link_to('Ejemplo', planet_ejemplo_path) %> </dt> 
+<dt><%=link_to('Author', planet_author_path) %></dt>
+</dl>
 	</div>
 	<div id="main">
 		<%= yield %> 
