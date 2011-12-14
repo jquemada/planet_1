@@ -13,4 +13,7 @@ class PlanetController < ApplicationController
   def author
   end
 
+#GET /planet/viajes
+  def viaje
+  end
 end

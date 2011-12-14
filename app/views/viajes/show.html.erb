@@ -1,9 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Site:</b>
-  <%= @viaje.site_id %>
-</p>
+<div id="site">
+  <h1><%= @sitio.name if @sitio.name %></h1>
+  <%= image_tag(@sitio.image_url, :class => 'site_image') %>
+  <h3><%= @sitio.name %></h3>
+                 <!-- sanitize limpia virus, ... -->
+  <p><%=sanitize @sitio.description %></p>
+  <div class="position">
+    <span>
+       <b>Latitude:</b> <!-- en negrita (bold) -->
+       <%= @sitio.latitude %>
+    </span>
+    <span>
+        <b>Longitude:</b> <!-- en negrita (bold) -->
+        <%= @sitio.longitude %>
+    </span>
+  </div>
+</div>
 
 
 <%= link_to 'Edit', edit_viaje_path(@viaje) %> |

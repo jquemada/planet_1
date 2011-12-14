@@ -17,6 +17,8 @@ resources :sites
 
   #añadimos la nueva ruta pedida para la entrega
   get "planet/author"
+#añadimos la nueva ruta para encontrar viaje
+ # get "planet/viaje"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -14,7 +14,7 @@ class ViajesController < ApplicationController
   # GET /viajes/1.json
   def show
     @viaje = Viaje.find(params[:id])
-
+    @sitio = Site.find(@viaje.site_id)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @viaje }
