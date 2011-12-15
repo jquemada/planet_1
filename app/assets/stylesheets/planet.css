@@ -76,9 +76,9 @@ color: #222266;
          margin: 0;
 }
 #site_list .list_description dt {
-! color:          #244;
-! font-weight: bold;
-! font-size:      larger;
+ color:          #244;
+ font-weight: bold;
+ font-size:      larger;
 }
 #site_list .list_description dd {
          margin: 0;
@@ -97,6 +97,12 @@ color: #222266;
 div#columns div#main div#site_list table tbody tr.list_line_odd td.list_description dl dt a{
 color: #BBFFBB;
   font-size: small;
+}
+div#columns div#main div#site a {
+float:right;
+font-size:medium;
+padding-right:2em;
+
 }
 
 

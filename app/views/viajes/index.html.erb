@@ -1,5 +1,4 @@
 <h1>Listing viajes</h1>
-
 <table>
   <tr>
     <th>Site</th>
@@ -9,8 +8,8 @@
   </tr>
 
 <% @viajes.each do |viaje| %>
-  <tr>
-    <td><%= viaje.site_id %></td>
+  <tr> <%sitio = Site.find(viaje.site_id) %>
+    <td><%= sitio.name %></td>
     <td><%= link_to 'Show', viaje %></td>
     <td><%= link_to 'Edit', edit_viaje_path(viaje) %></td>
     <td><%= link_to 'Destroy', viaje, confirm: 'Are you sure?', method: :delete %></td>

@@ -3,7 +3,7 @@ class ViajesController < ApplicationController
   # GET /viajes.json
   def index
     @viajes = Viaje.all
-
+    @sitios = Site.all
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @viajes }
@@ -37,11 +37,18 @@ class ViajesController < ApplicationController
     @viaje = Viaje.find(params[:id])
   end
 
-  # POST /viajes
-  # POST /viajes.json
-  def create
-    @viaje = Viaje.new(params[:viaje])
+  
 
+# POST /viajes
+  # POST /viajes.json
+
+
+  def create
+if params[:site_id].nil? 
+    @viaje = Viaje.new(params[:viaje])
+else 
+    @viaje = Viaje.new(params[:site_id])
+end
     respond_to do |format|
       if @viaje.save
         format.html { redirect_to @viaje, notice: 'Viaje was successfully created.' }

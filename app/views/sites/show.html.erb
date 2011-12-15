@@ -1,6 +1,19 @@
 <div id="site">
   <h1><%= @site.type.name if @site.type %></h1>
   <%= image_tag(@site.image_url, :class => 'site_image') %>
+
+<%= form_for @site, :url => {:controller=>"viajes", :action => "create"}  do |f| %>
+ <%= f.label :sitio_id %>
+
+
+<%= hidden_field_tag(:"viaje[site_id]", @site.id) %>  
+<%= hidden_field_tag(:_method, "POST") %>
+ 
+  <%= f.submit "Add to Viaje" %>
+<% end %>
+
+
+<%= link_to 'Añadir a viaje', new_viaje_path%>
   <h3><%= @site.name %></h3>
                  <!-- sanitize limpia virus, ... -->
   <p><%=sanitize @site.description %></p>

@@ -16,7 +16,14 @@
 <td class="list_description">
   <dl>      <!-- definition list -->
     <dt>    <!-- definition list name-->
-        <b> <%= link_to site.name, site %></b></dt>
+        <b> <%= link_to site.name, site %></b>
+<%= form_for site, :url => {:controller=>"viajes", :action => "create"}  do |f| %>
+<%= hidden_field_tag(:"viaje[site_id]", site.id) %>  
+<%= hidden_field_tag(:_method, "POST") %>
+ 
+  <%= f.submit "Add to Viaje" %>
+<% end %>
+</dt>
     <dd>    <!-- definition list text -->
         <%= truncate(strip_tags(site.description),
             :length => 80) %></dd>
