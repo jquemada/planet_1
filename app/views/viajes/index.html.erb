@@ -13,7 +13,7 @@
 
     <td><%= sitio.name %></td>
     <td><%= link_to 'Show', viaje %></td>
-    <td><%= link_to 'Edit', edit_viaje_path(viaje) %></td>
+    <td><%= link_to 'Change order', edit_viaje_path(viaje) %></td>
     <td><%= link_to 'Destroy', viaje, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
@@ -21,4 +21,3 @@
 
 <br />
 
-<%= link_to 'New Viaje', new_viaje_path %>
