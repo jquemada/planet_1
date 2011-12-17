@@ -9,7 +9,9 @@
 
 <% @viajes.each do |viaje| %>
   <tr> <%sitio = Site.find(viaje.site_id) %>
+
 <td><%= viaje.orden %></td>
+
 
     <td><%= sitio.name %></td>
     <td><%= link_to 'Show', viaje %></td>
