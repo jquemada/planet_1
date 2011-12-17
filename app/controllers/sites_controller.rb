@@ -3,12 +3,12 @@ class SitesController < ApplicationController
   # GET /sites.json
  
  def index
-
+@num_orden_sig = Viaje.all.count+1
 # Se incluye @site = Site.all dentro de esta sentencia if-else-end
 #    -> si la condición es falsa el path es: /types/id/sites
 if params[:type_id].nil? or params[:type_id].empty?
     @sites = Site.all
-
+   
 else
     @sites = Type.find(params[:type_id]).sites
     @type = Type.find(params[:type_id]).name

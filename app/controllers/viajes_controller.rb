@@ -44,14 +44,21 @@ class ViajesController < ApplicationController
 
 
   def create
+ @orden_sig = (Viaje.all.count+1)
 if params[:site_id].nil? 
     @viaje = Viaje.new(params[:viaje])
 else 
-    @viaje = Viaje.new(params[:site_id])
+if params[:orden]==@orden_sig 
+   @viaje = Viaje.new(params[:viaje])
+else
+  params[:orden]= @orden_sig 
+@viaje = Viaje.new(params[:viaje])
+ # @viaje = Viaje.new(:site_id =>params[:viaje][:site_id], :orden => (Viaje.all.count+1))
+end
 end
     respond_to do |format|
       if @viaje.save
-        format.html { redirect_to @viaje, notice: 'Viaje was successfully created.' }
+        format.html { redirect_to @viaje, notice: 'Viaje was successfully created. Order: '+ @orden_sig.to_s }
         format.json { render json: @viaje, status: :created, location: @viaje }
       else
         format.html { render action: "new" }

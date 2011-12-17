@@ -9,6 +9,14 @@
 
 <% @viajes.each do |viaje| %>
   <tr> <%sitio = Site.find(viaje.site_id) %>
+<!-- <td><%= viaje.orden %></td>-->
+<td>
+<%= form_for viaje do |f| %>
+ <%@prio = Viaje.find(:all, :select=>"orden") %>
+<%= hidden_field_tag(:"viaje[orden_old]", viaje.orden) %>
+       <%= f.collection_select(:orden, @prio, :orden, :orden) %>
+    <%= f.submit "Change order"%>
+<% end %></td>
     <td><%= sitio.name %></td>
     <td><%= link_to 'Show', viaje %></td>
     <td><%= link_to 'Edit', edit_viaje_path(viaje) %></td>

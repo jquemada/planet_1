@@ -1,8 +1,9 @@
+
 <div id="site_list">
 <% if params[:type_id].nil? or params[:type_id].empty? %>
 
-<h1>Todos Los Sitios</h1>
-<% else type_id=params[:type_id] %>
+<h1>Todos Los Sitios </h1>
+<% @num else type_id=params[:type_id] %>
 
 <h1> <%= @type %></h1>
 <% end %>
@@ -19,6 +20,7 @@
         <b> <%= link_to site.name, site %></b>
 <%= form_for site, :url => {:controller=>"viajes", :action => "create"}  do |f| %>
 <%= hidden_field_tag(:"viaje[site_id]", site.id) %>  
+<%= hidden_field_tag(:"viaje[orden]", @num_orden_sig) %> 
 <%= hidden_field_tag(:_method, "POST") %>
  
   <%= f.submit "Add to Viaje" %>
