@@ -12,9 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :site_id %><br />
-    <%= f.number_field :site_id %>
+  
+<%= hidden_field_tag(:"viaje[site_id]", @viaje.site_id) %>
+<% @sitio = Site.find(@viaje.site_id) %>
+<b><%= @sitio.name  %></b>
+  <br />    
+
   </div>
+ <%@prio = Viaje.find(:all, :select=>"orden") %>
+<%= hidden_field_tag(:"viaje[orden_old]", @viaje.orden) %>
+       <%= f.collection_select(:orden, @prio, :orden, :orden) %>
+   orden
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -2,7 +2,7 @@ class ViajesController < ApplicationController
   # GET /viajes
   # GET /viajes.json
   def index
-    @viajes = Viaje.all
+    @viajes = Viaje.find(:all, :order =>"orden")
     @sitios = Site.all
     respond_to do |format|
       format.html # index.html.erb
@@ -70,25 +70,39 @@ end
   # PUT /viajes/1
   # PUT /viajes/1.json
   def update
-    @viaje = Viaje.find(params[:id])
-
+#if params[:site_id]!=nil #si site_id no es nil ... 
+@orden_new = params[:viaje][:orden]    
+@orden_old = params[:viaje][:orden_old]
+    @viaje_old = Viaje.find_by_orden(@orden_new)
+    @viaje = Viaje.find(params[:id]) #al que modifico pongo orden que me envian y al viaje_old le pongo el orden del actual
+    
     respond_to do |format|
-      if @viaje.update_attributes(params[:viaje])
-        format.html { redirect_to @viaje, notice: 'Viaje was successfully updated.' }
+  if (@viaje.update_attributes(:orden => @orden_new) and @viaje_old.update_attributes(:orden => @orden_old))
+ #      if @viaje.update_attributes(params[:viaje])
+        format.html { redirect_to @viaje, notice: 'Viaje was successfully updated. Order Changed--> ' + 'new order: '+@orden_new.to_s}
         format.json { head :ok }
       else
         format.html { render action: "edit" }
         format.json { render json: @viaje.errors, status: :unprocessable_entity }
       end
     end
-  end
+
+ 
+end
 
   # DELETE /viajes/1
   # DELETE /viajes/1.json
   def destroy
     @viaje = Viaje.find(params[:id])
-    @viaje.destroy
+    @orden = @viaje.orden  #al borrar hay que reordenar los sitios del viaje
+@resto_sitios = Viaje.where("orden > ?", @orden)
+@viaje.destroy
 
+@resto_sitios.each do |viaje|
+ 
+viaje.update_attributes(:orden => @orden)
+@orden = @orden+1
+end
     respond_to do |format|
       format.html { redirect_to viajes_url }
       format.json { head :ok }
