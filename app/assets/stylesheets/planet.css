@@ -65,6 +65,48 @@
 }
 
 
+
+#trip_list table {
+        border-collapse: collapse;
+}
+
+#trip_list table tr td {
+        padding: 5px;
+        vertical-align: top;
+}
+
+#trip_list .list_name {
+  width:        40%;
+  margin: 0;
+  color:        #244;
+  font-weight:  bold;
+  font-size:    larger;
+  text-align:   center;
+}
+
+#trip_list .list_order {
+  width:        10%;
+  margin: 0;
+  color:        #244;
+  font-size:    larger;
+  text-align:   center;
+}
+
+#trip_list .list_actions {
+  font-size:    x-small;
+  text-align:   right;
+  padding-left: 1em;
+}
+
+#trip_list .list_line_even {
+  background:   #a8b8f8;
+}
+
+#trip_list .list_line_odd {
+  background:   #88b0f8;
+}
+
+
 /* START:mainlayout */
 /* Styles for main page */
 
@@ -78,13 +120,16 @@
   text-align: center;
 }
 
+#banner a { color: #669999; }
+a:visited { color: #66CCCC; }
+a:hover { color: #0033CC; 
+background-color:#D8D8D8; }
+
+
 #banner img {
   float: left;
   padding-left: 10px;
 }
-
-
-
 
 #columns {
   background: #446;

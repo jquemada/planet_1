@@ -1,6 +1,6 @@
 <div id="site">
  
-  <h1><%= @site.type.name if @site.type %></h1> 
+  <h1><b>Site: </b><%= @site.type.name if @site.type %></h1> 
 
   <%= image_tag(@site.image_url, :class => 'site_image') %>
 

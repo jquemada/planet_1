@@ -1,0 +1,31 @@
+<div id="trip_list"> 
+<h1>Listing selected sites</h1>
+
+<table>
+  <tr>
+    <th>Order</th>
+    <th>Selected site</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+
+<% @trips = Trip.find(:all, :order => :trip_id) %>
+
+<% @trips.each do |trip| %>
+  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>"> 
+    <td class="list_order">
+      <%= trip.trip_id %>
+    </td>
+    <td class="list_name">
+	<%= t = Site.find_by_id(trip.site_id).name %>
+    </td>
+    <td class="list_actions"> 
+      <%= link_to 'Show', site_path(trip.site_id) %><br/>
+      <%= link_to 'Edit', edit_trip_path(trip) %><br/>
+      <%= link_to 'Destroy', trip, confirm: 'Are you sure?', method: :delete %><br/>
+  </tr>
+<% end %>
+</table>
+</div>

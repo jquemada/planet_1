@@ -2,16 +2,16 @@ class SitesController < ApplicationController
   # GET /sites
   # GET /sites.json
   def index
-
     if params[:type_id].nil? or params[:type_id].empty?
       @sites = Site.all
     else
       @sites = Type.find(params[:type_id]).sites
     end
+    @trip = Trip.new
     
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @sites }
+        format.json { render :json=> @sites }
     end
   end
 
@@ -22,7 +22,7 @@ class SitesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @site }
+        format.json { render :json=> @site }
     end
   end
 
@@ -33,7 +33,7 @@ class SitesController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @site }
+        format.json { render :json=> @site }
     end
   end
 
@@ -49,11 +49,11 @@ class SitesController < ApplicationController
 
     respond_to do |format|
       if @site.save
-        format.html { redirect_to @site, notice: 'Site was successfully created.' }
-        format.json { render json: @site, status: :created, location: @site }
+          format.html { redirect_to @site, :notice=> 'Site was successfully created.' }
+          format.json { render :json=> @site, :status=> :created, :location=> @site }
       else
-        format.html { render action: "new" }
-        format.json { render json: @site.errors, status: :unprocessable_entity }
+          format.html { render :action=> "new" }
+          format.json { render :json=> @site.errors, :status=> :unprocessable_entity }
       end
     end
   end
@@ -65,11 +65,11 @@ class SitesController < ApplicationController
 
     respond_to do |format|
       if @site.update_attributes(params[:site])
-        format.html { redirect_to @site, notice: 'Site was successfully updated.' }
+          format.html { redirect_to @site, :notice=> 'Site was successfully updated.' }
         format.json { head :ok }
       else
-        format.html { render action: "edit" }
-        format.json { render json: @site.errors, status: :unprocessable_entity }
+          format.html { render :action=> "edit" }
+          format.json { render :json=> @site.errors, :status=> :unprocessable_entity }
       end
     end
   end
