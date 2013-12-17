@@ -1,13 +1,8 @@
 require 'test_helper'
 
 class PlanetControllerTest < ActionController::TestCase
-  test "should get index" do
-    get :index
-    assert_response :success
-  end
-
-  test "should get contact" do
-    get :contact
+  test "should get author" do
+    get :author
     assert_response :success
   end
 

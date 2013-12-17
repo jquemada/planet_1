@@ -1,4 +1,7 @@
 Planet::Application.routes.draw do
+<<<<<<< HEAD
+  get "planet/author"
+=======
 
   resources :trips
 
@@ -9,6 +12,7 @@ Planet::Application.routes.draw do
   resources :types do
     resources :sites
   end
+>>>>>>> origin
 
   get "planet/index"
 
