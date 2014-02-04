@@ -34,10 +34,8 @@
       <%= link_to "Contact", planet_contact_path %>
     </div> 
     <div id="main"> 
-	<%= link_to "Home", planet_index_path %> | <%= link_to "Contact", planet_contact_path %> | <%= link_to "Ejemplo", planet_ejemplo_path %> | <%= link_to "Author", planet_author_path %><br />
       <%= yield %>
-	<%= link_to "Home", planet_index_path %> | <%= link_to "Contact", planet_contact_path %> | <%= link_to "Ejemplo", planet_ejemplo_path %> | <%= link_to "Author", planet_author_path %><br /> 
-   </div> 
+    </div> 
   </div> 
 </body> 
 </html> 
