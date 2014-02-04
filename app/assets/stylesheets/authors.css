@@ -1,0 +1,21 @@
+.data {
+    border: 2px solid #444466;
+    padding: 10px;
+    margin: 10px;
+}
+.data img {
+    float: right;
+}
+
+p.spacer {
+    clear: both;
+}
+
+.cv {
+	border: 1px solid #444466;
+	margin-right: 500px ;
+}
+
+.title {
+	font-weight: bold;
+}
